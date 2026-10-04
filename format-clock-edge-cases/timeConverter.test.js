@@ -15,7 +15,12 @@ test("can correctly convert midnight  ", function(){
     assert.equal(formatAs12HourClock("24:00"), "12:00 am")
 });
 
-test("can correctly conver midday ", function(){
+test("can correctly convert midday ", function(){
     assert.equal(formatAs12HourClock("12:00"), "12:00 pm")
+
+})
+
+test("can correctly convert time with minutes ", function(){
+    assert.equal( formatAs12HourClock("12:45"), "12:45 pm")
 
 })
