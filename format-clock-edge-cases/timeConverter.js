@@ -9,7 +9,7 @@ function formatAs12HourClock(time) {
     return `12:00 pm`
   }
   if(stringHours == "00"){
-    return `12:${mints} am`
+   return `12:${mints} am`
 
   } 
    if(hours=== 12) {
