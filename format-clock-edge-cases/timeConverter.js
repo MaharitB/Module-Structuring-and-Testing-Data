@@ -1,9 +1,9 @@
 function formatAs12HourClock(time) {
-  const stringHours = time.slice(0, 2);
+  //const stringHours = time.slice(0, 2);
   const mints = time.slice(-2);
   const hours = Number(time.slice(0, 2));
  
-  if (stringHours == "00") {
+  if (hours == "00") {
     return `12:${mints} am`;
   }
   if (hours === 12) {
