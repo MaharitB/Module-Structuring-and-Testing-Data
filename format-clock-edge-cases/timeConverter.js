@@ -13,7 +13,7 @@ function formatAs12HourClock(time) {
     return `${hours}:${mints} pm`;
   }
   if (hours > 12) {
-    return `${hours - 12}:${mints} pm`;
+    return `${hours - 12}:00 pm`;
   }
   return `${time} am`;
 }
