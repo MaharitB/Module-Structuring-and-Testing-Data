@@ -11,7 +11,7 @@ test("can correctly convert morning time", function () {
 });
 
 test("can correctly convert midnight  ", function () {
-  assert.equal(formatAs12HourClock("24:00"), "12:00 am");
+  assert.equal(formatAs12HourClock("00:00"), "12:00 am");
 });
 
 test("can correctly convert midday ", function () {
