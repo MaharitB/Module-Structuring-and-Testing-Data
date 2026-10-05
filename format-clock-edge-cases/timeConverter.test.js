@@ -25,6 +25,9 @@ test("can correctly convert time with minutes ", function () {
 test("can correctly convert time  the end of midnight", function () {
   assert.equal(formatAs12HourClock("00:59"), "12:59 am");
 });
-test("can correctly convert time at the begning of noon", function (){
+test("can correctly convert time at the begning of noon", function () {
   assert.equal(formatAs12HourClock("12:01"), "12:01 pm");
+});
+test("can correctly convert time later than midday",function(){
+  assert.equal(formatAs12HourClock("13:01"), "01:01 pm")
 })
