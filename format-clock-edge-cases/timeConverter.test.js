@@ -31,9 +31,9 @@ test("can correctly convert time at the beginning of noon", function () {
 test("can correctly convert time later than midday", function () {
   assert.equal(formatAs12HourClock("13:01"), "01:01 pm");
 });
-test("can correctly convert time the last minute am turns pm ", function(){
-assert.equal(formatAs12HourClock("11:59"), "11:59 am");
+test("can correctly convert time the last minute am turns pm ", function () {
+  assert.equal(formatAs12HourClock("11:59"), "11:59 am");
 });
-test("can correctly convert time last minute of the day" , function(){
+test("can correctly convert time last minute of the day", function () {
   assert.equal(formatAs12HourClock("23:59"), "11:59 pm");
-})
+});
