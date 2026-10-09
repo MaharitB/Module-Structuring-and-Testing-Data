@@ -15,7 +15,20 @@
 // Acceptance criteria:
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
-
-export function getAngleType(angle) {
-  // TODO: Implement this function
+function getAngleType(angle) {
+  if (angle > 0 && angle < 90) return "acute angle";
+  else if (angle == 90) {
+    return "right angle";
+  } else if (angle > 90 && angle < 180) {
+    return "obtuse angle";
+  } else if (angle == 180) {
+    return "straight angle";
+  } else if (angle > 180 && angle < 360) {
+    return "reflex angle";
+  }
+  return "Invalid angle";
 }
+//export function getAngleType(angle) {
+// TODO: Implement this function
+//}
+console.log(getAngleType(30));
