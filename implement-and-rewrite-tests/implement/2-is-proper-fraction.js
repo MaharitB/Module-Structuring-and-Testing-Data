@@ -12,7 +12,12 @@
 // Acceptance criteria:
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
-
+function isProperFraction(numerator, denominator) {
+  if (numerator < denominator) {
+    return true;
+  }
+  return false;
+}
 export function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
 }
