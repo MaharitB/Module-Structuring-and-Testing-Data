@@ -28,7 +28,7 @@ function getAngleType(angle) {
   }
   return "Invalid angle";
 }
-//export function getAngleType(angle) {
-// TODO: Implement this function
-//}
-console.log(getAngleType(30));
+export function getAngleType(angle) {
+ TODO: Implement this function
+}
+
