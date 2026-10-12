@@ -24,5 +24,23 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  // TODO: Implement this function
+  let suit = card.slice(-1);
+  let cardInput = card.length;
+
+  if (suit == "♠" || suit == "♥" || suit == "♣" || suit == "♦") {
+    if (cardInput == 2) {
+      if (card[0] == "A") {
+        return 11;
+      } else if (card[0] == "J" && card[0] == "Q" && card[0] == "K") {
+        return 10;
+      } else if (card[0] >= 2 && card[0] < 10) {
+        return card[0];
+      }
+    }
+    if (cardInput == 3 && card.slice(0, 2) == "10") {
+      return 10;
+    }
+    return `error`;
+    // TODO: Implement this function
+  }
 }
