@@ -19,3 +19,10 @@ test("Basic proper function", () => {
 test("Basic proper function", () => {
   assert.equal(isProperFraction(1, 1), false);
 });
+test("Basic proper function", () => {
+  assert.equal(isProperFraction(-1, 2), true);
+});
+
+test("Basic proper function", () => {
+  assert.equal(isProperFraction(1, -2), true);
+});
