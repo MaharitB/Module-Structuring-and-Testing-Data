@@ -13,3 +13,9 @@ test("Basic proper fraction", () => {
 test("Basic proper function", () => {
   assert.equal(isProperFraction(2, 4), true);
 });
+test("Basic proper function", () => {
+  assert.equal(isProperFraction(4, 1), false);
+});
+test("Basic proper function", () => {
+  assert.equal(isProperFraction(1, 1), false);
+});
