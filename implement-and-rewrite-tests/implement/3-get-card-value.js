@@ -40,7 +40,7 @@ export function getCardValue(card) {
     if (cardInput == 3 && card.slice(0, 2) == "10") {
       return 10;
     }
-    return `error`;
-    // TODO: Implement this function
+  } else {
+    throw new Error(`Expected a number followed by a suit, but got "${card}"`);
   }
 }
