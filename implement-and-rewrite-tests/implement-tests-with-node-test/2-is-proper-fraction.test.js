@@ -13,10 +13,10 @@ test("Basic proper fraction", () => {
 test("Basic proper function", () => {
   assert.equal(isProperFraction(2, 4), true);
 });
-test("Basic proper function", () => {
+test("Not prpoer function", () => {
   assert.equal(isProperFraction(4, 1), false);
 });
-test("Basic proper function", () => {
+test("Not proper function", () => {
   assert.equal(isProperFraction(1, 1), false);
 });
 test("Basic proper function", () => {
@@ -26,9 +26,12 @@ test("Basic proper function", () => {
 test("Basic proper function", () => {
   assert.equal(isProperFraction(1, -2), true);
 });
-test("Basic proper function", () => {
+test("Not proper function", () => {
   assert.equal(isProperFraction(1, 0), false);
 });
-test("Basic proper function", () => {
+test("Not proper function", () => {
   assert.equal(isProperFraction(0, 1), false);
+});
+test("Not proper function", () => {
+  assert.equal(isProperFraction(0, 0), false);
 });
