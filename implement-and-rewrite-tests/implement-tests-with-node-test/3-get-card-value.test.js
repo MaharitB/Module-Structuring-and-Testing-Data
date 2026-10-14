@@ -44,3 +44,10 @@ test("throws for invalid rank", () => {
     "Expected clear error"
   );
 });
+test("throws invalid input", () => {
+  assert.throws(
+    () => getCardValue("100"),
+    /Expected a valid Rank and suit instead got "100"/,
+    "Expected clear error"
+  );
+});
