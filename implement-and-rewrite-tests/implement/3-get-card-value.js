@@ -69,4 +69,7 @@ export function getCardValue(card) {
   if (!validSuit.includes(suit)) {
     throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
   }
+  if (cardInput >= 3 && card[0] !== "10") {
+    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
+  }
 }
