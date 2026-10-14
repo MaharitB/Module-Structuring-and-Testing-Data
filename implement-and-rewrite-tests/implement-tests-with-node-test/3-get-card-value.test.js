@@ -13,7 +13,7 @@ test("returns 11 for ace cards", () => {
 test("returns 10 for cards with", () => {
   assert.equal(getCardValue("J♠"), 10);
   assert.equal(getCardValue("Q♥"), 10);
-  assert.equal(getCardValue("k♣"), 10);
+  assert.equal(getCardValue("K♣"), 10);
 });
 
 test("throws for invalid rank or suit", () => {
