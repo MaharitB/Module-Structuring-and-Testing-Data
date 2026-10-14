@@ -31,15 +31,20 @@ export function getCardValue(card) {
     if (cardInput == 2) {
       if (card[0] == "A") {
         return 11;
-      } else if (card[0] === "J" || card[0] === "Q" || card[0] === "K") {
+      }
+      if (card[0] == "J" || card[0] == "Q" || card[0] == "K") {
         return 10;
-      } else if (card[0] >= 2 && card[0] < 10) {
+      }
+      if (card[0] >= 2 && card[0] < 10) {
         return card[0];
       }
     }
     if (cardInput == 3 && card.slice(0, 2) === "10") {
       return 10;
     }
+  }
+  if (card == "invalid") {
+    throw new Error(`Expected a number followed by a suit, but got "${card}"`);
   } else {
     throw new Error(`Expected a number followed by a suit, but got "${card}"`);
   }
