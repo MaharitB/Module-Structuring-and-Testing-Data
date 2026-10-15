@@ -52,7 +52,7 @@ export function getCardValue(card) {
         return 10;
       }
       if (card[0] >= 2 && card[0] < 10) {
-        return card[0];
+        return Number(card[0]);
       }
     }
     if (cardInput == 3 && card.slice(0, 2) === "10") {
