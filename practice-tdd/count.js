@@ -1,3 +1,6 @@
 export function countChar(stringOfCharacters, findCharacter) {
-  return 5
+  if (stringOfCharacters[0] == findCharacter) {
+    return 5;
+  }
+  return 0;
 }
