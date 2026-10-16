@@ -29,3 +29,10 @@ test(" Should count multiple occurences of character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+test("should count multiple occurences of character", () => {
+  const str = "acc";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
