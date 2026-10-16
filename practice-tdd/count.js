@@ -1,6 +1,7 @@
 export function countChar(stringOfCharacters, findCharacter) {
-  if (stringOfCharacters[0] == findCharacter) {
-    return 5;
+  let i = 0;
+  if (stringOfCharacters[i] == findCharacter) {
+    return i++;
   }
   return 0;
 }
