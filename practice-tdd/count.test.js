@@ -27,5 +27,5 @@ test(" Should count multiple occurences of character", () => {
   const str = "aaaaa";
   const char = "c";
   const count = countChar(str, char);
-  expect(count).toEqual(3);
+  expect(count).toEqual(0);
 });
