@@ -30,10 +30,17 @@ test("should append 'rd' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(23)).toEqual("23rd");
   expect(getOrdinalNumber(133)).toEqual("133rd");
 });
+//csae4 : Number ending between 4 and 9 including (0,4,9)
 test("should append 'th' for numbers ending with (4,5,6,7,8,9,0)", () => {
   expect(getOrdinalNumber(4)).toEqual("4th");
   expect(getOrdinalNumber(10)).toEqual("10th");
   expect(getOrdinalNumber(15)).toEqual("15th");
   expect(getOrdinalNumber(58)).toEqual("58th");
   expect(getOrdinalNumber(100)).toEqual("100th");
+});
+//Case 5: the exception numbers left out in all the cases(11,12,13)
+test("should append 'th' for numbers 11, 12, 13", () => {
+  expect(getOrdinalNumber(11)).toEqual("11th");
+  expect(getOrdinalNumber(12)).toEqual("12th");
+  expect(getOrdinalNumber(13)).toEqual("13th");
 });
