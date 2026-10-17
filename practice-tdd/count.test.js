@@ -36,3 +36,9 @@ test("should count multiple occurences of character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(1);
 });
+test("should count multiple occurences of character", () => {
+  const str = "AAAa";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
