@@ -1,3 +1,8 @@
 export function getOrdinalNumber(num) {
-  return `${num}st`;
+  let numStr = num.toString();
+
+  if (numStr.slice(-1) == "1") {
+    return `${num}st`;
+  }
+  return `${num}nd`;
 }
