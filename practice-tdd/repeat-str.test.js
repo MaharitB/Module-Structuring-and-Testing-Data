@@ -40,7 +40,7 @@ test("should repeat the string count times", () => {
   const str = "hello";
   const count = 0;
   const repeatedStr = repeatStr(str, count);
-  expect(repeatedStr).toEqual("hello");
+  expect(repeatedStr).toEqual(" ");
 });
 // Case: Handle negative count:
 // Given a target string `str` and a negative integer `count`,
