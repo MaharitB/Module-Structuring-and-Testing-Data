@@ -47,7 +47,5 @@ test("should repeat the string count times", () => {
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
 test("should repeat the string count times", () => {
-  expect(() => repeatStr("hello", -1)).toThrow(
-    "Negative counts are not valid "
-  );
+  expect(() => repeatStr("hello", -1)).toThrow("Negative counts are not valid");
 });
