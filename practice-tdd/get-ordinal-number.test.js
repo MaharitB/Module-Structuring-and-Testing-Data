@@ -18,3 +18,9 @@ test("should append 'st' for numbers ending with 1, except those ending with 11"
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
+// Case 2: Numbers ending with 2(but not 12).
+test("should append 'nd' for numbers ending with 1, except those ending with 11", () => {
+  expect(getOrdinalNumber(2)).toEqual("2nd");
+  expect(getOrdinalNumber(22)).toEqual("22nd");
+  expect(getOrdinalNumber(132)).toEqual("132nd");
+});
