@@ -4,5 +4,8 @@ export function getOrdinalNumber(num) {
   if (numStr.slice(-1) == "1") {
     return `${num}st`;
   }
-  return `${num}nd`;
+  if (numStr.slice(-1) == "2") {
+    return `${num}nd`;
+  }
+  return `${num}rd`;
 }
