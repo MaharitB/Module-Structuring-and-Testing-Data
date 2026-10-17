@@ -1,6 +1,8 @@
 export function getOrdinalNumber(num) {
   let numStr = num.toString();
-
+  if (num == 0) {
+    throw new Error("Invalid Input");
+  }
   if (numStr.slice(-1) == "1" && num != 11) {
     return `${num}st`;
   }
