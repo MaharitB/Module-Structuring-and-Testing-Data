@@ -21,6 +21,12 @@ test("should repeat the string count times", () => {
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hellohello");
 });
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = 4;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("hellohellohellohello");
+});
 
 // Case: handle count of 1:
 // Given a target string `str` and a `count` equal to 1,
