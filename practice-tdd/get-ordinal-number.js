@@ -7,5 +7,8 @@ export function getOrdinalNumber(num) {
   if (numStr.slice(-1) == "2") {
     return `${num}nd`;
   }
-  return `${num}rd`;
+  if (numStr.slice(-1) == "3") {
+    return `${num}rd`;
+  }
+  return `${num}th`;
 }
