@@ -55,6 +55,18 @@ test("should count multiple occurences of character in a sentence", () => {
   const count = countChar(str, char);
   expect(count).toEqual(2);
 });
+test("should count multiple occurences of character in an empty string", () => {
+  const str = "";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+test("should count multiple occurences of character in a sentence", () => {
+  const str = " ";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(1);
+});
 test("should throw an error when findCharacter receives more than one character", () => {
   expect(() => {
     countChar("aaaaaaanaaa", "an");
