@@ -1,6 +1,6 @@
 export function getOrdinalNumber(num) {
   let numStr = num.toString();
-  if (num == 0 || num == " ") {
+  if (num <= 0 || num == " " || numStr.includes(".")) {
     throw new Error("Invalid Input");
   }
 
