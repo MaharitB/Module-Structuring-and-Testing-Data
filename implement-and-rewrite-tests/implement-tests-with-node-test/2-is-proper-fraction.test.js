@@ -10,28 +10,33 @@ test("Basic proper fraction", () => {
   // Example: 1/2 is a proper fraction
   assert.equal(isProperFraction(1, 2), true);
 });
-test("Basic proper function", () => {
+test("checking when numerator < denominators", () => {
   assert.equal(isProperFraction(2, 4), true);
 });
-test("Not prpoer function", () => {
+test("checking when Numerator > denominator", () => {
   assert.equal(isProperFraction(4, 1), false);
+  assert.equal(isProperFraction(5, 2), false);
 });
-test("Not proper function", () => {
+test("checking when numerator = denominator ", () => {
   assert.equal(isProperFraction(1, 1), false);
+  assert.equal(isProperFraction(2, 2), false);
 });
-test("Basic proper function", () => {
+test("Checking when numerator is negative number", () => {
   assert.equal(isProperFraction(-1, 2), true);
+  assert.equal(isProperFraction(-4, -6), true);
 });
-
-test("Basic proper function", () => {
+test("checking when denominator is negtive number", () => {
   assert.equal(isProperFraction(1, -2), true);
+  assert.equal(isProperFraction(2, -8), true);
 });
-test("Not proper function", () => {
+test("checking when denominator = 0", () => {
   assert.equal(isProperFraction(1, 0), false);
+  assert.equal(isProperFraction(5, 0), false);
 });
-test("Not proper function", () => {
-  assert.equal(isProperFraction(0, 1), false);
+test("Checking when numerator = 0", () => {
+  assert.equal(isProperFraction(0, 1), true);
+  assert.equal(isProperFraction(0, 5), true);
 });
-test("Not proper function", () => {
+test("checking when numerator= 0 = denominator", () => {
   assert.equal(isProperFraction(0, 0), false);
 });
