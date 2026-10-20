@@ -3,17 +3,17 @@ export function getOrdinalNumber(num) {
   if (num == 0) {
     throw new Error("Invalid Input");
   }
-  if (numStr.slice(-1) == "1" && num != 11) {
+
+  if (numStr.slice(-1) == "1" && numStr.slice(-2) != 11) {
     return `${num}st`;
   }
-  if (numStr.slice(-1) == "2" && num != 12) {
+
+  if (numStr.slice(-1) == "2" && numStr.slice(-2) != 12) {
     return `${num}nd`;
   }
-  if (numStr.slice(-1) == "3" && num != 13) {
+  if (numStr.slice(-1) == "3" && numStr.slice(-2) != 13) {
     return `${num}rd`;
   }
-  if (num == 11 || num == 12 || num == 13) {
-    return `${num}th`;
-  }
+
   return `${num}th`;
 }
