@@ -24,8 +24,8 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  let suit = card.slice(-1);
-  let cardInput = card.length;
+  const suit = card.slice(-1);
+  const cardInput = card.length;
   const validSuit = ["♠", "♥", "♣", "♦"];
   const validRank = [
     "A",
@@ -42,8 +42,20 @@ export function getCardValue(card) {
     "Q",
     "K",
   ];
+  if (card == "invalid") {
+    throw new Error(`Expected a number followed by a suit, but got "${card}"`);
+  }
 
-  if (suit == "♠" || suit == "♥" || suit == "♣" || suit == "♦") {
+  if (!validRank.includes(card[0])) {
+    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
+  }
+  if (!validSuit.includes(suit)) {
+    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
+  }
+  if (cardInput >= 3 && card[0] !== "10") {
+    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
+  }
+  if (validSuit) {
     if (cardInput == 2) {
       if (card[0] == "A") {
         return 11;
@@ -58,18 +70,5 @@ export function getCardValue(card) {
     if (cardInput == 3 && card.slice(0, 2) === "10") {
       return 10;
     }
-  }
-  if (card == "invalid") {
-    throw new Error(`Expected a number followed by a suit, but got "${card}"`);
-  }
-
-  if (!validRank.includes(card[0])) {
-    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
-  }
-  if (!validSuit.includes(suit)) {
-    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
-  }
-  if (cardInput >= 3 && card[0] !== "10") {
-    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
   }
 }
