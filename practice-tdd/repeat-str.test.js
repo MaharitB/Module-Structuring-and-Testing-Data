@@ -1,8 +1,6 @@
 // Implement a function repeatStr
 import { repeatStr } from "./repeat-str.js";
-
 // Case: handle count of 1, 2, 3, 4:
-
 test("should repeat the string 1 times", () => {
   const str = "hello";
   const count = 1;
@@ -28,7 +26,6 @@ test("should repeat the string 4 times", () => {
   expect(repeatedStr).toEqual("hellohellohellohello");
 });
 // Case: Handle count of 0:
-
 test("should repeat the string 0 times", () => {
   const str = "hello";
   const count = 0;
@@ -36,16 +33,16 @@ test("should repeat the string 0 times", () => {
   expect(repeatedStr).toEqual("");
 });
 //case: Handle decimal count
-
 test("should repeat the stringthe whole number in the count times", () => {
   const str = "hello";
   const count = 2.5;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("hellohello");
 });
-
 // Case: Handle negative count:
-
 test("should throw an error when -1 count is given", () => {
   expect(() => repeatStr("hello", -1)).toThrow("Negative counts are not valid");
+});
+test(`should throw an error when string is empty`, () => {
+  expect(() => repeatStr(" ", 1)).toThrow("String shoild not be empty");
 });
