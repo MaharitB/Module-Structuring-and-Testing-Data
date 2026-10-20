@@ -1,11 +1,25 @@
 import { getOrdinalNumber } from "./get-ordinal-number.js";
 
+// In this week's prep, we started implementing getOrdinalNumber.
+// Continue testing and implementing getOrdinalNumber for additional cases.
+// Write your tests using Jest — remember to run your tests often for continual feedback.
+// To ensure thorough testing, we need broad scenarios that cover all possible cases.
+// Listing individual values, however, can quickly lead to an unmanageable number of test cases.
+// Instead of writing tests for individual numbers, consider grouping all possible input values
+// into meaningful categories. Then, select representative samples from each category to test.
+// This approach improves coverage and makes our tests easier to maintain.
+
+// Case 1: Numbers ending with 1 (but not 11)
+// When the number ends with 1, except those ending with 11,
+// Then the function should return a string by appending "st" to the number.
+
 // Case 1: Numbers ending with 1 (but not 11).
 test("should append 'st' for numbers ending with 1, except those ending with 11", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
   expect(getOrdinalNumber(21)).toEqual("21st");
   expect(getOrdinalNumber(131)).toEqual("131st");
 });
+
 // Case 2: Numbers ending with 2(but not 12).
 test("should append 'nd' for numbers ending with 2, except those ending with 12", () => {
   expect(getOrdinalNumber(2)).toEqual("2nd");
@@ -45,4 +59,12 @@ test(` should throw an error when num is 0`, () => {
 //case 7 how about when empty string is the argument
 test(`Should throw an error when num is empty string`, () => {
   expect(() => getOrdinalNumber(" ")).toThrow(`Invalid Input`);
+});
+// Case 8 how about when num is -ve number
+test(`should throw an Error when num is -ve number`, () => {
+  expect(() => getOrdinalNumber(-5).toThrow(`Invalid Input`));
+});
+//case 9 when num is decimal number
+test(`Should throw an Error when num is decimal number`, () => {
+  expect(() => getOrdinalNumber(1.5).toThrow(`Invalid Input`));
 });
