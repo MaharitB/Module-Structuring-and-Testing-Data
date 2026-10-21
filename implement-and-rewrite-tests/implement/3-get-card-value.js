@@ -45,16 +45,16 @@ export function getCardValue(card) {
   if (card == "invalid") {
     throw new Error(`Expected a number followed by a suit, but got "${card}"`);
   }
-
-  if (!validRank.includes(card[0])) {
-    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
+  if (!validRank.includes(card.slice(0, -1)) && !validSuit.includes(suit)) {
+    throw new Error(`Expected a valid Rank and Suit instaed got "${card}"`);
+  }
+  if (!validRank.includes(card.slice(0, -1))) {
+    throw new Error(`Expected a valid Rank instead got "${card}"`);
   }
   if (!validSuit.includes(suit)) {
-    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
+    throw new Error(`Expected a valid Suit instead got "${card}"`);
   }
-  if (cardInput >= 3 && card[0] !== "10") {
-    throw new Error(`Expected a valid Rank and suit instead got "${card}"`);
-  }
+
   if (validSuit) {
     if (cardInput == 2) {
       if (card[0] == "A") {
