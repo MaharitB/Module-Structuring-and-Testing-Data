@@ -15,6 +15,9 @@ test("returns 10 for cards with", () => {
   assert.equal(getCardValue("Q♥"), 10);
   assert.equal(getCardValue("K♣"), 10);
 });
+test("returns 10 for cards with", () => {
+  assert.equal(getCardValue("10♣"), 10);
+});
 
 test("throws for invalid rank or suit", () => {
   assert.throws(
@@ -26,28 +29,28 @@ test("throws for invalid rank or suit", () => {
 test("throws for invalid rank", () => {
   assert.throws(
     () => getCardValue("11♠"),
-    /Expected a valid Rank and suit instead got "11♠"/,
+    /Expected a valid Rank instead got "11♠"/,
     "Expected clear error"
   );
 });
 test("throws for invalid suit", () => {
   assert.throws(
     () => getCardValue("AA"),
-    /Expected a valid Rank and suit instead got "AA"/,
+    /Expected a valid Suit instead got "AA"/,
     "Expected clear error"
   );
 });
 test("throws for invalid rank", () => {
   assert.throws(
     () => getCardValue("1♣"),
-    /Expected a valid Rank and suit instead got "1♣"/,
+    /Expected a valid Rank instead got "1♣"/,
     "Expected clear error"
   );
 });
 test("throws invalid input", () => {
   assert.throws(
     () => getCardValue("100"),
-    /Expected a valid Rank and suit instead got "100"/,
+    /Expected a valid Suit instead got "100"/,
     "Expected clear error"
   );
 });
