@@ -5,6 +5,8 @@ import { getCardValue } from "../implement/3-get-card-value.js";
 
 test("Valid single-digit card", () => {
   assert.equal(getCardValue("9♠"), 9);
+  assert.equal(getCardValue("2♥"), 2);
+  assert.equal(getCardValue("5♣"), 5);
 });
 test("returns 11 for ace cards", () => {
   assert.equal(getCardValue("A♠"), 11);
@@ -33,24 +35,38 @@ test("throws for invalid rank", () => {
     "Expected clear error"
   );
 });
-test("throws for invalid suit", () => {
+test("throws for invalid suit when A is given as suit", () => {
   assert.throws(
     () => getCardValue("AA"),
     /Expected a valid Suit instead got "AA"/,
     "Expected clear error"
   );
 });
-test("throws for invalid rank", () => {
+test("throws for invalid rank when 1 is given as Rank", () => {
   assert.throws(
     () => getCardValue("1♣"),
     /Expected a valid Rank instead got "1♣"/,
     "Expected clear error"
   );
 });
-test("throws invalid input", () => {
+test("throws invalid suit when 0 is given as suit", () => {
   assert.throws(
     () => getCardValue("100"),
     /Expected a valid Suit instead got "100"/,
+    "Expected clear error"
+  );
+});
+test("throws invalid input when empty space is given", () => {
+  assert.throws(
+    () => getCardValue(" "),
+    /Expected a valid Rank and Suit instaed got " "/,
+    "Expected clear error"
+  );
+});
+test("throws invalid Rank when given empty space before the card", () => {
+  assert.throws(
+    () => getCardValue(" 10♠"),
+    /Expected a valid Rank instead got " 10♠"/,
     "Expected clear error"
   );
 });
