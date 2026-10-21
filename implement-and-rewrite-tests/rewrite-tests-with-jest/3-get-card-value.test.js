@@ -13,7 +13,6 @@ test(`should retun 10 when given(J,Q,K)cards`, () => {
   expect(getCardValue("Q♥")).toEqual(10);
   expect(getCardValue("K♦")).toEqual(10);
 });
-
 test(`throws for invalid cards`, () => {
   expect(() => {
     getCardValue("invalid");
@@ -22,22 +21,27 @@ test(`throws for invalid cards`, () => {
 test(`throws for invalid rank`, () => {
   expect(() => {
     getCardValue("1♥");
-  }).toThrow(`Expected a valid Rank and suit instead got "1♥"`);
+  }).toThrow(`Expected a valid Rank instead got "1♥"`);
 });
 test(`throws for invalid suit`, () => {
   expect(() => {
     getCardValue("AS");
-  }).toThrow(`Expected a valid Rank and suit instead got "AS"`);
+  }).toThrow(`Expected a valid Suit instead got "AS"`);
 });
 test(`throws for invalid input`, () => {
   expect(() => {
     getCardValue("100");
-  }).toThrow(`Expected a valid Rank and suit instead got "100"`);
+  }).toThrow(`Expected a valid Suit instead got "100"`);
 });
-test(`throws for invalid suit`, () => {
+test(`throws for invalid rank`, () => {
   expect(() => {
     getCardValue("15♥");
-  }).toThrow(`Expected a valid Rank and suit instead got "15♥"`);
+  }).toThrow(`Expected a valid Rank instead got "15♥"`);
+});
+test(`throws for invalid input`, () => {
+  expect(() => {
+    getCardValue(" ");
+  }).toThrow(`Expected a valid Rank and Suit instaed got " "`);
 });
 
 // Suggestion: Group the remaining test data into these categories:
