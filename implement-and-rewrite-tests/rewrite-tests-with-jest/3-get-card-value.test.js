@@ -53,6 +53,11 @@ test(`throws for invalid input`, () => {
     getCardValue("♣4");
   }).toThrow(`Expected a valid Rank and Suit instaed got "♣4"`);
 });
+test(`throws for invalid input`, () => {
+  expect(() => {
+    getCardValue("");
+  }).toThrow(`Expected a valid Rank and Suit instaed got ""`);
+});
 
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
