@@ -59,7 +59,7 @@ test("throws invalid suit when 0 is given as suit", () => {
 test("throws invalid input when empty space is given", () => {
   assert.throws(
     () => getCardValue(" "),
-    /Expected a valid Rank and Suit instaed got " "/,
+    /Expected a valid Rank and Suit instead got " "/,
     "Expected clear error"
   );
 });
@@ -72,8 +72,8 @@ test("throws invalid Rank when given empty space before the card", () => {
 });
 test("throws invalid input when given null as input", () => {
   assert.throws(
-    () => getCardValue(""),
-    /Expected a valid Rank and Suit instaed got ""/,
+    () => getCardValue(null),
+    /Expected a valid Rank and Suit instead got null/,
     "Expected clear error"
   );
 });
