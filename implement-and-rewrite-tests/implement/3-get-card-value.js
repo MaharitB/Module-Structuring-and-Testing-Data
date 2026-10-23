@@ -24,6 +24,9 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
+  if (card == null) {
+    throw new Error(`Expected a valid Rank and Suit instead got null`);
+  }
   const suit = card.slice(-1);
   const cardInput = card.length;
   const validSuit = ["♠", "♥", "♣", "♦"];
@@ -45,8 +48,9 @@ export function getCardValue(card) {
   if (card == "invalid") {
     throw new Error(`Expected a number followed by a suit, but got "${card}"`);
   }
+
   if (!validRank.includes(card.slice(0, -1)) && !validSuit.includes(suit)) {
-    throw new Error(`Expected a valid Rank and Suit instaed got "${card}"`);
+    throw new Error(`Expected a valid Rank and Suit instead got "${card}"`);
   }
   if (!validRank.includes(card.slice(0, -1))) {
     throw new Error(`Expected a valid Rank instead got "${card}"`);
