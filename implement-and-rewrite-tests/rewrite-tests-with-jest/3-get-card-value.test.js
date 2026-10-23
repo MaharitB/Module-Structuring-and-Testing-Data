@@ -41,22 +41,22 @@ test(`throws for invalid rank`, () => {
 test(`throws for invalid input`, () => {
   expect(() => {
     getCardValue(" ");
-  }).toThrow(`Expected a valid Rank and Suit instaed got " "`);
+  }).toThrow(`Expected a valid Rank and Suit instead got " "`);
 });
 test(`throws for invalid input with space ending`, () => {
   expect(() => {
     getCardValue("4♣ ");
-  }).toThrow(`Expected a valid Rank and Suit instaed got "4♣ "`);
+  }).toThrow(`Expected a valid Rank and Suit instead got "4♣ "`);
 });
 test(`throws for invalid input`, () => {
   expect(() => {
     getCardValue("♣4");
-  }).toThrow(`Expected a valid Rank and Suit instaed got "♣4"`);
+  }).toThrow(`Expected a valid Rank and Suit instead got "♣4"`);
 });
 test(`throws for invalid input`, () => {
   expect(() => {
-    getCardValue("");
-  }).toThrow(`Expected a valid Rank and Suit instaed got ""`);
+    getCardValue(null);
+  }).toThrow(`Expected a valid Rank and Suit instead got null`);
 });
 
 // Suggestion: Group the remaining test data into these categories:
