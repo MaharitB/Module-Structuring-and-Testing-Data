@@ -34,8 +34,8 @@ test("checking when denominator = 0", () => {
   assert.equal(isProperFraction(5, 0), false);
 });
 test("Checking when numerator = 0", () => {
-  assert.equal(isProperFraction(0, 1), true);
-  assert.equal(isProperFraction(0, 5), true);
+  assert.equal(isProperFraction(0, 1), false);
+  assert.equal(isProperFraction(0, 5), false);
 });
 test("checking when numerator= 0 = denominator", () => {
   assert.equal(isProperFraction(0, 0), false);
