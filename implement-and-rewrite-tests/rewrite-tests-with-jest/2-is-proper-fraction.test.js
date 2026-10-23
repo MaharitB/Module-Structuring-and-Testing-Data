@@ -24,9 +24,9 @@ test(`should return false when(numerator = 0 and numerator = 0)`, () => {
 test(`should return true when(numerator < denominator)`, () => {
   expect(isProperFraction(-1, 2)).toEqual(true);
 });
-test(`should return true when numerator > denominator)`, () => {
+test(`should return true when the input is -ve |numerator|<|denominator|`, () => {
   expect(isProperFraction(-1, -2)).toEqual(true);
 });
-test(`should return false when(numerator < denominator)`, () => {
+test(`should return false when the input is -ve |numerator|>|denominator|`, () => {
   expect(isProperFraction(-2, -1)).toEqual(false);
 });
