@@ -12,7 +12,7 @@ test("should count multiple occurrences of a character 'a' ", () => {
 
 // Scenario: No Occurrences
 
-test(" Should count 0", () => {
+test("Should count 0 when the char has no matching character in the string str", () => {
   const str = "aaaaa";
   const char = "c";
   const count = countChar(str, char);
@@ -43,7 +43,7 @@ test("should count multiple occurences of character with signs", () => {
   const count = countChar(str, char);
   expect(count).toEqual(1);
 });
-test("should count multiple occurences of character empty space", () => {
+test("should count multiple occurences of space character in a sentece", () => {
   const str = "let's play tag";
   const char = " ";
   const count = countChar(str, char);
@@ -55,13 +55,13 @@ test("should count multiple occurences of character in a sentence", () => {
   const count = countChar(str, char);
   expect(count).toEqual(2);
 });
-test("should count multiple occurences of character in an empty string", () => {
+test("should count 0 character in an empty string", () => {
   const str = "";
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
-test("should count multiple occurences of character in a sentence", () => {
+test("should count occurence of space character ", () => {
   const str = " ";
   const char = " ";
   const count = countChar(str, char);
