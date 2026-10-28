@@ -6,8 +6,8 @@ export function repeatStr(str, count) {
   let repeatedStr = str;
   count = Math.floor(count);
 
-  if (str === " ") {
-    throw new Error("String shoild not be empty");
+  if (str === "") {
+    throw new Error("String should not be empty");
   }
   if (count < 0) {
     throw new Error("Negative counts are not valid");
