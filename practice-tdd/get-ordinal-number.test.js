@@ -12,8 +12,6 @@ import { getOrdinalNumber } from "./get-ordinal-number.js";
 // Case 1: Numbers ending with 1 (but not 11)
 // When the number ends with 1, except those ending with 11,
 // Then the function should return a string by appending "st" to the number.
-
-// Case 1: Numbers ending with 1 (but not 11).
 test("should append 'st' for numbers ending with 1, except those ending with 11", () => {
   expect(getOrdinalNumber(1)).toEqual("1st");
   expect(getOrdinalNumber(21)).toEqual("21st");
@@ -51,14 +49,14 @@ test("should append 'th' for numbers 11, 12, 13", () => {
   expect(getOrdinalNumber(113)).toEqual("113th");
 });
 
-//case 6 now we have come to the last one 0
+//case 6 how about when num is 0
 test(` should throw an error when num is 0`, () => {
   expect(() => getOrdinalNumber(0)).toThrow(`Invalid Input`);
 });
 
 //case 7 how about when empty string is the argument
 test(`Should throw an error when num is empty string`, () => {
-  expect(() => getOrdinalNumber(" ")).toThrow(`Invalid Input`);
+  expect(() => getOrdinalNumber("")).toThrow(`Invalid Input`);
 });
 // Case 8 how about when num is -ve number
 test(`should throw an Error when num is -ve number`, () => {
