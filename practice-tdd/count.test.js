@@ -61,7 +61,7 @@ test("should count 0 character in an empty string", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
-test("should count occurence of space character ", () => {
+test("should count occurence of space character", () => {
   const str = " ";
   const char = " ";
   const count = countChar(str, char);
